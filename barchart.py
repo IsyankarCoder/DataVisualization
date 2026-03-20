@@ -25,10 +25,14 @@ def etiketEkle(x,y):
      for i in range(len(x)):
           plt.text(i,y[i],y[i],ha="center")
 
-plt.bar(x=ozet.index,height=ozet.values,color="g")
-plt.xlabel("Sigara İçme Durumu")
-plt.ylabel("Ödeme Miktarı")
-etiketEkle(ozet.index,ozet.values.round(2))
+print(ozet.index)
+print(ozet.values)
+
+#plt.bar(x=ozet.index,height=ozet.values,color="g",width=0.95)
+plt.barh(y=ozet.index,width=ozet.values,color="b",height=0.8)
+#plt.xlabel("Sigara İçme Durumu")
+#plt.ylabel("Ödeme Miktarı")
+#etiketEkle(ozet.index,ozet.values.round(2))
 plt.show()
 
  
