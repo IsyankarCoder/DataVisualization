@@ -21,10 +21,14 @@ verisetim.dtypes
 
 ozet = verisetim.groupby("sigaraDurum")["odemeMiktari"].mean()
 
+def etiketEkle(x,y):
+     for i in range(len(x)):
+          plt.text(i,y[i],y[i],ha="center")
+
 plt.bar(x=ozet.index,height=ozet.values,color="g")
 plt.xlabel("Sigara İçme Durumu")
 plt.ylabel("Ödeme Miktarı")
-
+etiketEkle(ozet.index,ozet.values.round(2))
 plt.show()
 
  
